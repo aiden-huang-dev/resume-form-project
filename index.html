@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>個人資料表</title>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+
+  <style>
+    .innerFormTable td,
+    .innerFormTable th {
+      padding: 0px;
+    }
+
+    .taba {
+      padding: 0 15px;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    table,
+    th,
+    td,
+    caption {
+      border: 2px solid #939194;
+    }
+
+    .table1 {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      margin: 4px 0;
+    }
+
+    .r {
+      color: red;
+    }
+
+    .b {
+      color: blue;
+    }
+
+    .gr {
+      background-color: #F0EBEF;
+    }
+
+    .ye {
+      background-color: #FEFFEF;
+    }
+
+    input,
+    textarea,
+    select {
+      background-color: #FEFFEF;
+      border-width: 0 0 2px 0;
+      border-bottom-color: black;
+      font-family: inherit;
+    }
+
+    .table2 {
+      border-collapse: collapse;
+      border-top: 0;
+      width: 100%;
+    }
+
+    button {
+      padding: 6px 16px;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <form method="POST" action="save.php">
+        <table class="table1" align="center">
+      <colgroup>
+        <col span="1" class="gr">
+        <col class="ye">
+      </colgroup>
+
+      <thead>
+        <tr>
+          <td align="left" colspan="4" class="b">
+            學制：四技日間部　系(所)別：日四技XX四甲　學號：1234567890　姓名：aiden-huang-dev
+          </td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td width="10%"><p class="r">身分證</p></td>
+          <td colspan="2">
+            <input type="text" name="id_number" class="redtext" value="A123456789" style="width: 150px; height: 25px;">
+          </td>
+          <td rowspan="4" align="center" width="100">
+            <img src="../resume_test/bighead.jpg" width="120" height="120" alt="大頭貼">
+          </td>
+        </tr>
+        <tr>
+          <td><p class="r">出生地</p></td>
+          <td colspan="2">
+            <select name="birth_place">
+              <option value="">請選擇</option>
+              <option>台北市</option>
+              <option>新北市</option>
+              <option>桃園市</option>
+              <option>台中市</option>
+              <option>台南市</option>
+              <option>高雄市</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p class="r">生日</p></td>
+          <td colspan="2">
+            <input type="text" name="birthday" style="width: 150px; height: 25px;">(例: 0910101)
+          </td>
+        </tr>
+        <tr>
+          <td><p>血型</p></td>
+          <td colspan="2">
+            <label><input type="radio" name="blood" value="A">A</label>
+            <label><input type="radio" name="blood" value="B">B</label>
+            <label><input type="radio" name="blood" value="O">O</label>
+            <label><input type="radio" name="blood" value="AB">AB</label>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2"><p class="r">通訊處</p></td>
+          <td width="40%">
+            通訊地址
+            <input type="text" name="contact_zip" style="width: 50px; height: 25px;" value="123"><br>
+            <input type="text" name="contact_addr" style="width: 330px; height: 25px;" value="台中市XX區XX街XX巷XX號">
+          </td>
+          <td colspan="2" class="gr"><p class="r">電話</p></td>
+        </tr>
+        <tr>
+          <td>
+            戶籍地址
+            <input type="text" name="home_zip" style="width: 50px; height: 25px;" value="123"><br>
+            <input type="text" name="home_addr" style="width: 330px; height: 25px;" value="台中市XX區XX街XX巷XX號">
+          </td>
+          <td colspan="2" class="ye">
+            (H):<input type="tel" name="phone_home" style="width: 150px; height: 25px;" value="04-12345678">
+            (M):<input type="tel" name="phone_mobile" style="width: 150px; height: 25px;" value="0912-345-678">
+          </td>
+        </tr>
+        <tr>
+          <td><p>E-Mail</p></td>
+          <td colspan="3">
+            <input type="email" name="email" style="width: 330px; height: 25px;" value="123@gmail.com">
+          </td>
+        </tr>
+        <tr>
+          <td><p>服役狀況</p></td>
+          <td colspan="3">
+            <select name="military_status">
+              <option>未服役</option>
+              <option>已服役</option>
+              <option>免服役</option>
+              <option>停役</option>
+              <option>現役</option>
+              <option>替代役</option>
+              <option>國民兵</option>
+              <option>補充兵</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p>特殊才能</p></td>
+          <td colspan="3">
+            <textarea name="talent" style="width: 800px; height: 40px;"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><p>休閒興趣</p></td>
+          <td colspan="3">
+            <textarea name="interest" style="width: 800px; height: 40px;"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table2">
+      <tr class="gr">
+        <th width="25%">一句話形容過去自己</th>
+        <th width="25%">一句話形容現在自己</th>
+        <th width="25%">一句話形容未來自己</th>
+        <th width="25%">一個形容詞描述自己</th>
+      </tr>
+      <tr class="ye">
+        <td><input type="text" style="width: 200px; height: 25px;" name="self_past"></td>
+        <td><input type="text" style="width: 200px; height: 25px;" name="self_now"></td>
+        <td><input type="text" style="width: 200px; height: 25px;" name="self_future"></td>
+        <td><input type="text" style="width: 200px; height: 25px;" name="self_adj"></td>
+      </tr>
+    </table>
+
+    <center>
+      <br>
+      <button type="submit" onclick="return goGO()">確認送出</button>
+      <button type="reset">清除重填</button>
+    </center>
+
+  </form>
+
+  <script>
+    function goGO() {
+      // 抓欄位
+      const idInput       = document.querySelector('input[name="id_number"]');
+      const birthSelect   = document.querySelector('select[name="birth_place"]');
+      const birthdayInput = document.querySelector('input[name="birthday"]');
+
+      const contactZip    = document.querySelector('input[name="contact_zip"]');
+      const contactAddr   = document.querySelector('input[name="contact_addr"]');
+      const homeZip       = document.querySelector('input[name="home_zip"]');
+      const homeAddr      = document.querySelector('input[name="home_addr"]');
+
+      // 收集沒填的欄位名稱
+      const missing = [];
+
+      // 身分證：必填＋長度 10
+      const id = idInput.value.trim();
+      if (!id) {
+        missing.push('身分證');
+      } else if (id.length !== 10) {
+        missing.push('身分證需為 10 碼');
+      }
+
+      if (!birthSelect.value.trim()) {
+        missing.push('出生地');
+      }
+
+      if (!birthdayInput.value.trim()) {
+        missing.push('生日');
+      }
+
+      // 通訊處：通訊／戶籍 都要有郵遞區號＋地址
+      if (!contactZip.value.trim() || !contactAddr.value.trim() ||
+          !homeZip.value.trim()    || !homeAddr.value.trim()) {
+        missing.push('通訊處（通訊／戶籍地址與郵遞區號）');
+      }
+
+      if (missing.length > 0) {
+        alert('請完整填寫：\n\n' + missing.join('、'));
+        return false; // 擋下送出
+      }
+
+      // 全部都有填 → 允許送出表單
+      return true;
+    }
+  </script>
+  
+</body>
+</html>
