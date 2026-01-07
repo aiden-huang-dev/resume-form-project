@@ -54,5 +54,11 @@ A web practice project that demonstrates basic frontend form handling, PHP backe
 
 ---
 
+## Database Structure (phpMyAdmin)
+The following screenshot shows the database table structure designed in MySQL and viewed via phpMyAdmin.
+![Database structure](phpmyadmin-structure.png)
+
+---
+
 ## Notes / 備註
 此專案為學習用途，主要用來理解前後端與資料庫的串接流程，仍在持續整理與優化中。
